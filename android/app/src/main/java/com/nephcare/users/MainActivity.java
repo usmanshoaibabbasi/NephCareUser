@@ -1,4 +1,4 @@
-package com.example.neph_care_user;
+package com.nephcare.users;
 
 import io.flutter.embedding.android.FlutterActivity;
 

@@ -7,7 +7,6 @@ import 'package:neph_care_user/constants/base_url.dart';
 import 'package:neph_care_user/constants/colors.dart';
 import 'package:neph_care_user/modals/home_modal.dart';
 import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/home/home_card.dart';
-import 'package:neph_care_user/services/home_api.dart';
 import 'package:neph_care_user/widgets/waiting_card.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

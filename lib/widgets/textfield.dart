@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:neph_care_user/constants/colors.dart';
 
 InputDecoration inputField1(
-    {required String label1,
+    {required String label1 ,
     BuildContext? context,
     Widget? suffixIcon,
     Widget? prefixicon}) {

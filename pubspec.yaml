@@ -43,6 +43,7 @@ dependencies:
   open_file: ^3.2.1
   image_picker: ^0.8.4+9
   file_picker: ^4.4.0
+  flutter_stripe: ^2.4.0
   http:
   change_app_package_name: ^1.0.0
 

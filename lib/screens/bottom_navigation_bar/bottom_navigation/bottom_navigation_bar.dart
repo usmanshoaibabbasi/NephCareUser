@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:neph_care_user/constants/colors.dart';
-import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/covid_test_request.dart';
+import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/covidTestRequest/covid_test_request.dart';
 import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/home/home.dart';
 import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/Profile/profile_page.dart';
-import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/setting.dart';
+import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/setting/setting.dart';
 
 class MyNavigationBar extends StatefulWidget {
   const MyNavigationBar({Key? key}) : super(key: key);

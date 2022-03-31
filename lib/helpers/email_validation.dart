@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 extension EmailValidator on String {
   bool isValidEmail() {
     return RegExp(

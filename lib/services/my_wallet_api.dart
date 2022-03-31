@@ -3,11 +3,13 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:neph_care_user/constants/base_url.dart';
 import 'package:neph_care_user/modals/my_wallet_modal.dart';
-import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/Profile/my_wallet.dart' as profile;
-import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/covid_test_request.dart' as req;
+import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/Profile/my_wallet.dart'
+    as profile;
+import 'package:neph_care_user/screens/bottom_navigation_bar/navigation_pages/covidTestRequest/covid_test_request.dart'
+    as req;
 import 'package:shared_preferences/shared_preferences.dart';
 
-Future<String>  walletFunction() async {
+Future<String> walletFunction() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   var token = prefs.getString('api_token');
   print(token);
@@ -27,7 +29,7 @@ Future<String>  walletFunction() async {
 
     print('resp');
     print(resp);
-    if(response.data['error'] == false) {
+    if (response.data['error'] == false) {
       var res1 = response.data['user'];
       MyWalletModal wallet = MyWalletModal(
         balance: res1['balance'] ?? 0,
@@ -39,11 +41,9 @@ Future<String>  walletFunction() async {
       //   myWalletModal = walletModal;
       // });
     }
-
   } catch (e) {
     // setState(() {});
     print(e);
   }
   return '';
-
 }

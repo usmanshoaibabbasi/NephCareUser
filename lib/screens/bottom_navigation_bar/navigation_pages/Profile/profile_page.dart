@@ -20,6 +20,7 @@ UserProfileModal? userProfileModal;
 var loading = true;
 
 class _ProfilePageState extends State<ProfilePage> {
+  @override
   void initState() {
     setState(() {
       loading = true;
@@ -36,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: loading == true
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : Stack(
               children: [
                 Column(
@@ -76,19 +77,12 @@ class _ProfilePageState extends State<ProfilePage> {
                 SingleChildScrollView(
                   physics: const BouncingScrollPhysics(),
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
-                      borderRadius: const BorderRadius.only(
+                      borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
                       ),
-                      boxShadow: [
-                        BoxShadow(
-                          offset: const Offset(0, 2),
-                          color: HexColor('#404B63').withOpacity(0.1),
-                          blurRadius: 10,
-                        ),
-                      ],
                     ),
                     margin: const EdgeInsets.fromLTRB(15, 120, 15, 0),
                     width: MediaQuery.of(context).size.width,
@@ -105,16 +99,13 @@ class _ProfilePageState extends State<ProfilePage> {
                             ),
                             Container(
                               transform: Matrix4.translationValues(0, -38, 0),
-                              child:
-                              userProfileModal?.image.toString() == '' ||
+                              child: userProfileModal?.image.toString() == '' ||
                                       userProfileModal?.image.toString() == null
-                                  ?
-                              CircleAvatar(
+                                  ? CircleAvatar(
                                       radius: 50,
                                       backgroundColor: Colors.white,
                                       child: ClipOval(
-                                        child: Image.asset(
-                                            'assets/imguser.png',
+                                        child: Image.asset('assets/imguser.png',
                                             height: 100,
                                             width: 100,
                                             fit: BoxFit.cover),
@@ -133,7 +124,8 @@ class _ProfilePageState extends State<ProfilePage> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.pushReplacementNamed(context, editprofileroute);
+                                Navigator.pushReplacementNamed(
+                                    context, editprofileroute);
                               },
                               child: Container(
                                 margin: const EdgeInsets.only(top: 10),
